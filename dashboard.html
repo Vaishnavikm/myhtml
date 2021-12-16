@@ -87,16 +87,16 @@
         document.querySelector("body").classList.toggle("active");
     })
 </script>
-<div class="col-md-6">
+<div class="col-md-8">
     <div class="topleft">
-                <canvas id="myChart" style="width: 100%;;max-width:800px;"></canvas>
+            <canvas id="myChart" style="width: 100%;;max-width:1000px;"></canvas>
     </div>
 </div>
 
-<canvas id="multiline" style="width:100%;max-width:800px;"></canvas>
+<canvas id="multiline" style="width:100%;max-width:750px;"></canvas>
 
 <script>
-var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+var xValues = ["January", "March", "May", "July", "September"];
 var yValues = [55, 49, 44, 24, 15];
 var barColors = [
   "#b91d47",
@@ -118,7 +118,7 @@ new Chart("myChart", {
   options: {
     title: {
       display: true,
-      text: "World Wide Wine Production 2018"
+      text: "Supply in the year 2021"
     }
   }
 });
@@ -153,12 +153,12 @@ var xValues = [100,200,300,400,500,600,700,800,900,1000];
 
     <p>wine</p>
 <div class="container">
-  <div class="Quantity wine">90%</div>
+  <div class="Quantity beans">90%</div>
 </div>
 
 <p>rum</p>
 <div class="container">
-  <div class="Quantity rum">80%</div>
+  <div class="Quantity sugar">80%</div>
 </div>
 
 <p>Coffee</p>

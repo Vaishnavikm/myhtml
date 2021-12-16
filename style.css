@@ -142,6 +142,8 @@ body{
 /* Container for skill bars */
 .container {
   width: 50%; /* Full width */
+  float:right;
+  padding-right: 25px;
   background-color: #ddd; /* Grey background */
 }
 
@@ -150,10 +152,11 @@ body{
   padding-top: 10px; /* Add top padding */
   padding-bottom: 10px; /* Add bottom padding */
   color: white; /* White text color */
+
 }
 
-.wine {width: 90%; background-color: #04AA6D;} /* Green */
-.rum {width: 80%; background-color: #2196F3;} /* Blue */
+.beans {width: 90%; background-color: #04AA6D;} /* Green */
+.sugar{width: 80%; background-color: #2196F3;} /* Blue */
 .coffee {width: 65%; background-color: #f44336;} /* Red */
 .cream {width: 60%; background-color: #808080;} /* Dark Grey */
 
@@ -216,7 +219,7 @@ form {
   
   /* The "Forgot password" text */
   span.psw {
-    float: right;
+    float: left;
     padding-top: 16px;
   }
   
