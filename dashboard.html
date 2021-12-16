@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="style.css" />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+   <title>Coffee House</title>
+ </head>
+ <body>
+   <div class="wrapper">
+    <!--Top menu -->
+    <div class="section">
+        <div class="top_navbar">
+            <div class="hamburger">
+                <a href="#">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+       <!--profile image & text-->
+       <div class="profile">
+        <img src="logo.jpg" alt="LOGO">
+        <h3>Coffee House</h3>
+        <p>Inventory</p>
+    </div>
+        <!--menu item-->
+        <ul>
+            <li>
+                <a href="login.html" >
+                    <span class="icon"><i class="fas fa-home"></i></span>
+                    <span class="item">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="dashboard.html" class="active">
+                    <span class="icon"><i class="fas fa-desktop"></i></span>
+                    <span class="item">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="stocks.html">
+                    <span class="icon"><i class="fas fa-user-friends"></i></span>
+                    <span class="item">Stock Details</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                    <span class="item">Employee details</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-database"></i></span>
+                    <span class="item">Product Details</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-chart-line"></i></span>
+                    <span class="item">Reports</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-user-shield"></i></span>
+                    <span class="item">Admin</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-cog"></i></span>
+                    <span class="item">Settings</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    </div>
+</div>
+<script>
+ var hamburger = document.querySelector(".hamburger");
+    hamburger.addEventListener("click", function(){
+        document.querySelector("body").classList.toggle("active");
+    })
+</script>
+<div class="col-md-6">
+    <div class="topleft">
+                <canvas id="myChart" style="width: 100%;;max-width:800px;"></canvas>
+    </div>
+</div>
+
+<canvas id="multiline" style="width:100%;max-width:800px;"></canvas>
+
+<script>
+var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+var yValues = [55, 49, 44, 24, 15];
+var barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+new Chart("myChart", {
+  type: "doughnut",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "World Wide Wine Production 2018"
+    }
+  }
+});
+</script>
+
+<script>
+
+var xValues = [100,200,300,400,500,600,700,800,900,1000];
+
+    new Chart("multiline", {
+      type: "line",
+      data: {
+        labels: xValues,
+        datasets: [{
+          data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+          borderColor: "red",
+          fill: false
+        },{
+          data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+          borderColor: "green",
+          fill: false
+        },{
+          data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+          borderColor: "blue",
+          fill: false
+        }]
+      },
+      options: {
+        legend: {display: false}
+      }
+    });</script>
+
+    <p>wine</p>
+<div class="container">
+  <div class="Quantity wine">90%</div>
+</div>
+
+<p>rum</p>
+<div class="container">
+  <div class="Quantity rum">80%</div>
+</div>
+
+<p>Coffee</p>
+<div class="container">
+  <div class="Quantity coffee">65%</div>
+</div>
+
+<p>cream</p>
+<div class="container">
+  <div class="Quantity cream">60%</div>
+</div>
+
+ </body>
+</html>
